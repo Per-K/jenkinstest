@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo Check
 '''
-        stash '*.py'
+        stash(name: 'py-file', includes: '*.py')
       }
     }
     stage('Test') {
