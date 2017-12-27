@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Check') {
       steps {
-        sh 'echo Check'
+        sh '''echo Check
+'''
+        stash '*.py'
       }
     }
     stage('Test') {
